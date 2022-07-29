@@ -1,0 +1,77 @@
+header {
+    background-image: url("../images/backgrounds/top.png");
+    width: 1440px;
+    height: 765px;
+}
+
+.header {
+    width: 1440px;
+    height: 90px;
+    background-color: $color-brand-transparent;
+
+    .navigation {
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+
+        .logo {
+            margin-left: 2px;
+
+            h1 {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+                font-size: 1px;
+        } 
+        }
+
+        .header__navigation {
+            padding-right: 15px;
+
+            li {
+                display: inline-block;
+                @include text($headings-font, $color-text-secondary, 16px);
+                font-weight: 500;
+                line-height: 20px;
+                margin-right: 42px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.header::after {
+    position: absolute;
+    content: "";
+    width: 1440px;
+    height: 6px;
+    top: 90px;
+    background: linear-gradient($color-additional-transparent, rgba(255, 255, 255, 0));
+}
+
+.promo__content {
+    h2 {
+        margin: 32px 0;
+        width: 892px;
+        @include text($text-font, $color-text-secondary, 80px);
+        line-height: 96px;
+    }
+
+    p {
+        @include text($text-font, $color-text-secondary, 20px);
+        font-style: italic;
+        margin: 32px 0 46px;
+    }
+
+    .promo__input {
+        position: relative;
+    }
+
+    .promo__input button {
+        position: absolute;
+        top: 18px;
+        left: 646px;
+    }
+}

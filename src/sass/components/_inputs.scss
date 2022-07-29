@@ -1,0 +1,19 @@
+.promo__input input {
+    width: 559px;
+    height: 95px;
+    left: 120px;
+    top: 416px;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    padding: 0 292px 0 41px;
+    @include text($text-font, $color-brand, 24px);
+    font-style: italic;
+}
+
+.promo__input input::placeholder {
+    @include text($text-font, $color-brand, 24px);
+    font-style: italic;
+}
+
+

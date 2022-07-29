@@ -1,0 +1,37 @@
+.footer {
+    margin-top: -67px;
+    text-align: center;
+
+    .wrapper {
+        position: relative;
+
+        p {
+            margin: 30px 0 0;
+            @include text($headings-font, $color-text-secondary, 16px);
+        }
+
+        .social-medias {
+            position: absolute;
+            top: -8px;
+            right: -12px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            > * {
+                margin: 0 11px;
+            }
+
+            .social-medias__youtube {
+                position: relative;
+                top: 3px;
+
+                :last-child {
+                    position: absolute;
+                    top: 22%;
+                    left: 35%;
+                }
+            }
+        }
+    }
+}

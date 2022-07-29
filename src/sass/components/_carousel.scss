@@ -1,0 +1,33 @@
+.carousel {
+    
+    .gallery {
+        position: absolute;
+        width: 2590px;
+        margin-left: -575px;
+        overflow-x: visible;
+        transition: margin-left 0.3s;
+    }
+
+    .gallery__card {
+        position: relative;
+        display: inline-block;
+        margin: 0 28px;
+
+        img {
+            border-radius: 16px;
+        }
+        p {
+            position: absolute; 
+            @include text($headings-font, $color-text-secondary, 32px);
+            margin: 0;
+            bottom: 45px;
+            left: 15px;
+        }
+    }
+
+    .gallery__switchers {
+        text-align: center;
+        margin: 0 0 37px;
+        padding-top: 823px;
+    }
+}

@@ -1,0 +1,21 @@
+.destinations {
+    margin-top: 82px;
+    height: 1069px;
+    text-align: center;
+
+    h2 {
+        margin: 0 0 48px;
+        @include heading($headings-font, $color-brand, 40px);
+    }
+
+    button {
+        position: relative;
+        padding-left: 55px;
+
+        img {
+            position: absolute;
+            top: 18.25px;
+            left: 33.5px;
+        }
+    }
+}

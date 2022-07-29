@@ -1,0 +1,24 @@
+.btn {
+    width: 103px;
+    height: 41px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), 0px 1px 2px rgba(13, 96, 111, 0.16);
+}
+
+.btn_colored {
+    background: $color-additional;
+    @include text($headings-font, $color-text-secondary, 16px);
+}
+
+.btn_large {
+    width: 228px;
+    height: 59px;
+    @include text($headings-font, $color-text-secondary, 24px);
+}
