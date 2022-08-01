@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Red+Hat+Text:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Red+Hat+Text:wght@400;500&display=swap");
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
    ========================================================================== */
@@ -713,6 +713,104 @@ header {
   left: 35%;
 }
 
+.log-in {
+  position: absolute;
+  width: 560px;
+  height: 610px;
+  top: 0;
+  left: 0;
+  margin-left: calc(50vw - 335px);
+  margin-top: -800px;
+  padding: 25px 45px;
+  background: linear-gradient(177.09deg, #ffffff 6.15%, #0d606f 202.69%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: margin-top 0.3s;
+  z-index: 999;
+}
+.log-in h3 {
+  margin: 1px 0 30px;
+  font-family: "Aleo", serif;
+  color: #0D606F;
+  font-size: 32px;
+}
+.log-in .log-in__separator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -9px;
+}
+.log-in .log-in__separator p {
+  font-family: "Aleo", serif;
+  color: rgba(13, 96, 111, 0.5);
+  font-size: 20px;
+}
+.log-in form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.log-in form label {
+  font-family: "Aleo", serif;
+  color: #0D606F;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.log-in form input {
+  width: 538px;
+  height: 54px;
+  background: #ffffff;
+  border: none;
+  box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.log-in form a {
+  text-align: center;
+  font-family: "Aleo", serif;
+  color: #0D606F;
+  font-size: 15px;
+  font-weight: 700;
+  align-self: center;
+  margin-bottom: 26px;
+}
+.log-in form :nth-child(2) {
+  margin-bottom: 19px;
+}
+.log-in form :nth-child(3) {
+  margin-bottom: 5px;
+}
+.log-in form :nth-child(4) {
+  margin-bottom: 22px;
+}
+.log-in > p {
+  font-family: "Aleo", serif;
+  color: rgba(13, 96, 111, 0.5);
+  font-size: 15px;
+  margin-top: 20px;
+}
+.log-in > p a {
+  color: #0D606F;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 102%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  z-index: 2;
+  transition: display 0.3s;
+  overflow: hidden;
+}
+
 .btn {
   width: 103px;
   height: 41px;
@@ -740,6 +838,41 @@ header {
   font-family: "Red Hat Text", sans-serif;
   color: #ffffff;
   font-size: 24px;
+}
+
+.log-in-btn {
+  width: 560px;
+  height: 56px;
+  left: 45px;
+  top: 93px;
+  border: none;
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px;
+  font-family: "Red Hat Text", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.log-in-btn > img {
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
+.log-in-btn_facebook {
+  background: #1877f2;
+}
+
+.log-in-btn_google {
+  background: #ffffff;
+  color: #0D606F;
+  margin-bottom: 10px;
+}
+
+.log-in-btn_submit {
+  background: #0D606F;
+  margin-bottom: 10px;
 }
 
 .promo__input input {

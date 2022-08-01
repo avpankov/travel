@@ -21,3 +21,27 @@ next.addEventListener('click', () => {
     middle.classList.remove('switcher_active');
     next.classList.add('switcher_active');
 })
+
+//Estimate scroll width
+let div = document.createElement('div');
+div.style.overflowY = 'scroll';
+div.style.width = '50px';
+div.style.height = '50px';
+document.body.append(div);
+let scrollWidth = div.offsetWidth - div.clientWidth;
+div.remove();
+
+//Log-in form
+logIn.addEventListener('click', () => {
+    document.querySelector('.overlay').style.display = 'block';
+    document.querySelector('.log-in').style.marginTop = 152 + 'px';
+    document.body.style.overflowY = 'hidden';
+    document.body.style.paddingRight = scrollWidth + 'px';
+})
+
+document.querySelector('.overlay').addEventListener('click', () => {
+    document.querySelector('.overlay').style.display = 'none';
+    document.querySelector('.log-in').style.marginTop = -800 + 'px';
+    document.body.style.overflowY = 'auto';
+    document.body.style.paddingRight = 0;
+})

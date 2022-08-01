@@ -22,3 +22,37 @@
     height: 59px;
     @include text($headings-font, $color-text-secondary, 24px);
 }
+
+.log-in-btn {
+    width: 560px;
+    height: 56px;
+    left: 45px;
+    top: 93px;
+    border: none;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    @include text($headings-font, $color-text-secondary, 20px);
+    font-weight: 400;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    >img {
+        vertical-align: bottom;
+        margin-right: 10px;
+    }
+}
+
+.log-in-btn_facebook {
+    background: #1877f2;
+}
+
+.log-in-btn_google {
+    background: #ffffff;
+    color: $color-additional;
+    margin-bottom: 10px;
+}
+
+.log-in-btn_submit {
+    background: $color-additional;
+    margin-bottom: 10px;
+}
