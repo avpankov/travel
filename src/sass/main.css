@@ -453,7 +453,7 @@ template {
 body {
   max-width: 1440px;
   margin: 0 auto;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .wrapper {
@@ -472,6 +472,12 @@ header {
   height: 90px;
   background-color: rgba(242, 120, 92, 0.7);
 }
+.header h1 {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  font-size: 1px;
+}
 .header .navigation {
   height: 90px;
   display: flex;
@@ -481,12 +487,6 @@ header {
 }
 .header .navigation .logo {
   margin-left: 2px;
-}
-.header .navigation .logo h1 {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-  font-size: 1px;
 }
 .header .navigation .header__navigation {
   padding-right: 15px;
@@ -713,14 +713,20 @@ header {
   left: 35%;
 }
 
-.log-in {
+.authentication {
   position: absolute;
-  width: 560px;
-  height: 610px;
   top: 0;
   left: 0;
   margin-left: calc(50vw - 335px);
   margin-top: -800px;
+  transition: margin-top 0.3s;
+  z-index: 999;
+}
+
+.log-in {
+  position: absolute;
+  width: 560px;
+  height: 610px;
   padding: 25px 45px;
   background: linear-gradient(177.09deg, #ffffff 6.15%, #0d606f 202.69%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -728,14 +734,6 @@ header {
   text-align: center;
   display: flex;
   flex-direction: column;
-  transition: margin-top 0.3s;
-  z-index: 999;
-}
-.log-in h3 {
-  margin: 1px 0 30px;
-  font-family: "Aleo", serif;
-  color: #0D606F;
-  font-size: 32px;
 }
 .log-in .log-in__separator {
   display: flex;
@@ -748,18 +746,26 @@ header {
   color: rgba(13, 96, 111, 0.5);
   font-size: 20px;
 }
-.log-in form {
+
+.log-in__header {
+  margin: 1px 0 30px;
+  font-family: "Aleo", serif;
+  color: #0D606F;
+  font-size: 32px;
+}
+
+.form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.log-in form label {
+.form label {
   font-family: "Aleo", serif;
   color: #0D606F;
   font-size: 16px;
   margin-bottom: 5px;
 }
-.log-in form input {
+.form input {
   width: 538px;
   height: 54px;
   background: #ffffff;
@@ -769,46 +775,49 @@ header {
   padding-left: 20px;
   margin-bottom: 20px;
 }
-.log-in form a {
+.form a {
   text-align: center;
   font-family: "Aleo", serif;
   color: #0D606F;
   font-size: 15px;
   font-weight: 700;
   align-self: center;
-  margin-bottom: 26px;
+  margin-bottom: 12px;
 }
-.log-in form :nth-child(2) {
+.form :nth-child(2) {
   margin-bottom: 19px;
 }
-.log-in form :nth-child(3) {
+.form :nth-child(3) {
   margin-bottom: 5px;
 }
-.log-in form :nth-child(4) {
+.form :nth-child(4) {
   margin-bottom: 22px;
 }
-.log-in > p {
+
+.note {
   font-family: "Aleo", serif;
   color: rgba(13, 96, 111, 0.5);
   font-size: 15px;
-  margin-top: 20px;
+  margin-top: 19px;
 }
-.log-in > p a {
+.note a {
   color: #0D606F;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.overlay {
-  display: none;
+.sign-up {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 102%;
-  height: 100%;
-  background: #000;
-  opacity: 0.5;
-  z-index: 2;
-  transition: display 0.3s;
-  overflow: hidden;
+  display: none;
+  width: 560px;
+  padding: 25px 45px;
+  background: linear-gradient(177.09deg, #ffffff 6.15%, #0d606f 202.69%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  text-align: center;
+}
+.sign-up .note {
+  margin-bottom: -2px;
 }
 
 .btn {

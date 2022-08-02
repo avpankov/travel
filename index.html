@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
     <meta charset="UTF-8">
@@ -12,12 +12,12 @@
 <body>
         <header>
             <section class="header">
+                <h1>Travel Portal</h1>
                 <div class="wrapper">
                     <nav class="navigation">
                         <div class="logo">
                             <a href=""><img src="./src/images/logo/Vector.svg" alt=""></a>
-                            <a href=""><img src="./src/images/logo/Travel Portal.svg" alt=""></a>
-                            <h1>Travel Portal</h1>
+                            <a href=""><img src="./src/images/logo/Travel_Portal.svg" alt=""></a>
                         </div>
                         <ul class="header__navigation">
                             <li>How It Works</li>
@@ -26,7 +26,7 @@
                             <li>Travel Stories</li>
                         </ul>
                         <div class="login-button">
-                            <button class="btn btn_colored" id="logIn">Login</button>
+                            <button class="btn btn_colored" id="logInBtn">Login</button>
                         </div>
                     </nav>
                 </div>
@@ -37,7 +37,7 @@
                         <h2>Explore the beauty of the World</h2>
                         <p>Receive personalized recommendations for countries, hotels, activities and more</p>
                         <div class="input promo__input">
-                            <input type="text" name="" id="" placeholder="What would you like to do?">
+                            <input type="text" name="text" placeholder="What would you like to do?">
                             <button class="btn btn_colored btn_large">Start Planning</button>
                         </div>
                     </div>
@@ -51,21 +51,21 @@
                     <div class="layout-3-column">
                         <div class="step">
                             <div class="step__icon">
-                                <img src="./src/images/icons/Rectangle 13.png" alt="rectangle">
+                                <img src="./src/images/icons/Rectangle_13.png" alt="rectangle">
                                 <img src="./src/images/icons/bicycle.png" alt="bicycle">
                             </div>
                             <p>Tell us what you want to do</p>
                         </div>
                         <div class="step">
                             <div class="step__icon">
-                                <img src="./src/images/icons/Rectangle 13.png" alt="rectangle">
+                                <img src="./src/images/icons/Rectangle_13.png" alt="rectangle">
                                 <img src="./src/images/icons/calendar.png" alt="calendar">
                             </div>
                             <p>Share us preferable dates</p>
                         </div>
                         <div class="step">
                             <div class="step__icon">
-                                <img src="./src/images/icons/Rectangle 13.png" alt="rectangle">
+                                <img src="./src/images/icons/Rectangle_13.png" alt="rectangle">
                                 <img src="./src/images/icons/plain.png" alt="plain">
                             </div>
                             <p>We will give you recommendations</p>
@@ -203,30 +203,44 @@
                     </div>
                 </div>
             </section>
-            <section class="log-in">
-                <h3>Log in to your account</h3>
-                <div class="log-in__buttons">
-                    <button class="log-in-btn log-in-btn_facebook"><img src="./src/images/log-in/path14.png" alt="">
-                        Sign In with Facebook</button>
-                    <button class="log-in-btn log-in-btn_google"><img src="./src/images/log-in/Google Logo.png" alt="">
-                        Sign In with Google</button>
-                </div>
-                <div class="log-in__separator">
-                    <img src="./src/images/log-in/Line 2.png" alt="">
-                    <p>or</p>
-                    <img src="./src/images/log-in/Line 2.png" alt="">
-                </div>
-                <form action="">
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
-                    <button type="submit" class="log-in-btn log-in-btn_submit">Sign In</button>
-                    <a href="">Forgot Your Password?</a>
-                </form>
-                <img src="./src/images/log-in/Line 2 (1).png" alt="">
-                <p>Don’t have an account? <a href="">Register</a></p>
-            </section>
+            <div class="authentication">
+                <section class="log-in">
+                    <h3 class="log-in__header">Log in to your account</h3>
+                    <div class="log-in__buttons">
+                        <button class="log-in-btn log-in-btn_facebook"><img src="./src/images/log-in/path14.png" alt="">
+                            Sign In with Facebook</button>
+                        <button class="log-in-btn log-in-btn_google"><img src="./src/images/log-in/Google_Logo.png" alt="">
+                            Sign In with Google</button>
+                    </div>
+                    <div class="log-in__separator">
+                        <img src="./src/images/log-in/Line_2.png" alt="">
+                        <p>or</p>
+                        <img src="./src/images/log-in/Line_2.png" alt="">
+                    </div>
+                    <form class="form">
+                        <label for="loginEmail">E-mail</label>
+                        <input type="email" name="loginEmail" id="loginEmail">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" name="loginPassword" id="loginPassword">
+                        <button type="submit" class="log-in-btn log-in-btn_submit">Sign In</button>
+                        <a href="">Forgot Your Password?</a>
+                    </form>
+                    <img src="./src/images/log-in/Line_2_(1).png" alt="">
+                    <p class="note">Don’t have an account? <a id="registerLink">Register</a></p>
+                </section>
+                <section class="sign-up">
+                    <h3 class="log-in__header">Create account</h3>
+                    <form class="form">
+                        <label for="signupEmail">E-mail</label>
+                        <input type="email" name="signupEmail" id="signupEmail">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" name="signupPassword" id="signupPassword">
+                        <button type="submit" class="log-in-btn log-in-btn_submit">Sign Up</button>
+                    </form>
+                    <img src="./src/images/log-in/Line_2_(1).png" alt="">
+                    <p class="note">Already have an account? <a id="loginLink">Log in</a></p>
+                </section>
+            </div>
         </main>
         <footer class="footer">
             <div class="wrapper">

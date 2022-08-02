@@ -1,0 +1,119 @@
+.authentication {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: calc(50vw - 335px);
+    margin-top: -800px;
+    transition: margin-top .3s;
+    z-index: 999;
+}
+
+.log-in {
+    position: absolute;
+    width: 560px;
+    height: 610px;
+    padding: 25px 45px;
+    background: linear-gradient(177.09deg, #ffffff 6.15%, #0d606f 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+    .log-in__separator {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: -9px;
+
+        p {
+            @include text($text-font, rgba(13, 96, 111, 0.5), 20px);
+        }
+    }
+}
+
+.log-in__header {
+    margin: 1px 0 30px;
+    @include text($text-font, $color-additional, 32px);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    label {
+        @include text($text-font, $color-additional, 16px);
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 538px;
+        height: 54px;
+        background: #ffffff;
+        border: none;
+        box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+        border-radius: 10px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    a {
+        text-align: center;
+        @include text($text-font, $color-additional, 15px);
+        font-weight: 700;
+        align-self: center;
+        margin-bottom: 12px;
+    }
+    :nth-child(2) {
+        margin-bottom: 19px;
+    }
+
+    :nth-child(3) {
+        margin-bottom: 5px;
+    }
+
+    :nth-child(4) {
+        margin-bottom: 22px;
+    }
+}
+
+.note {
+    @include text($text-font, rgba(13, 96, 111, 0.5), 15px);
+    margin-top: 19px;
+
+    a {
+        color: $color-additional;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+// .overlay {
+//     display: none;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 102%;
+//     height: 100%;
+//     background: #000;
+//     opacity: 0.5;
+//     z-index: 2;
+//     transition: display .3s;
+//     overflow: hidden;
+// }
+
+.sign-up {
+    position: absolute;
+    display: none;
+    width: 560px;
+    padding: 25px 45px;
+    background: linear-gradient(177.09deg, #ffffff 6.15%, #0d606f 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    text-align: center;
+
+    .note {
+        margin-bottom: -2px;
+    }
+}
