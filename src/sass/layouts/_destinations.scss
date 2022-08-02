@@ -3,19 +3,39 @@
     height: 1069px;
     text-align: center;
 
+    @include media-mobile {
+        height: 270px;
+        margin-top: 20px;
+    }
+
     h2 {
         margin: 0 0 48px;
         @include heading($headings-font, $color-brand, 40px);
+
+        @include media-mobile {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
     }
 
     button {
         position: relative;
         padding-left: 55px;
 
+        @include media-mobile { 
+            padding-left: 25px;
+        }
+
         img {
             position: absolute;
             top: 18.25px;
             left: 33.5px;
+
+            @include media-mobile {
+                top: 3px;
+                left: 1px;  
+                transform: scale(0.3);
+            }
         }
     }
 }

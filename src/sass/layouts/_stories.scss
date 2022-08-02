@@ -5,42 +5,88 @@
 
     .stories__list {
         height: 1331px;
-        background: url('../images/backgrounds/stories.png');
+        background: url("../images/backgrounds/stories.png");
+
+        @include media-mobile {
+            height: 693px;
+            background: url("../images/mobile/backgrounds/Rectangle_28.png");
+        }
 
         .stories__list_filter {
             height: 1260px;
             padding-top: 10px;
             background: rgba(255, 255, 255, 0.7);
+
+            @include media-mobile {
+                height: 628px;
+            }
         }
     }
 
     h2 {
         margin: 0 0 43px;
         @include heading($headings-font, $color-brand, 40px);
+
+        @include media-mobile {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
     }
 
     .story {
         height: 250px;
         text-align: left;
-        display: flex;
         margin: 30px 0;
-        
-        img {
-            filter: drop-shadow(0px 4px 4px #0D606F);
+        display: flex;
+
+        @include media-mobile {
+            margin: 7.5px 0;
+            height: 140px;
+        }
+
+        .story__picture {
+            height: 250px;
+            width: 400px;
+            filter: drop-shadow(0px 4px 4px #0d606f);
             border-radius: 16px;
             margin-right: 40px;
+
+            @include media-mobile {
+                width: 155px;
+                height: 130px;
+                margin-right: 10px;
+            }
         }
 
         .story__content {
+            width: 760px;
+
+            @include media-mobile {
+                width: 195px;
+            }
+
             h3 {
                 margin: 0 0 25px;
                 @include text($text-font, $color-text, 35px);
                 font-weight: 400;
+
+                @include media-mobile {
+                    font-size: 11px;
+                    margin: 0 0 10px;
+                    font-weight: 700;
+                }
             }
-    
+
             p {
                 @include text($text-font, $color-text, 20px);
                 line-height: 24px;
+
+                @include media-mobile {
+                    overflow: hidden;
+                    height: 102px;
+                    font-size: 9px;
+                    line-height: 10.8px;
+                }
 
                 b {
                     text-decoration: underline;
@@ -49,11 +95,70 @@
         }
     }
 
+    .story:first-child {
+
+        @include media-mobile {
+            margin: 0 0 7.5px;
+        }
+
+        .story__picture {
+            background: url("../images/stories/story1.png");
+
+            @include media-mobile {
+                background: url('../images/mobile/stories/story1.png');
+            }
+        }
+    }
+
+    .story:nth-child(2) {
+        .story__picture {
+            background: url("../images/stories/story2.png");
+
+            @include media-mobile {
+                background: url('../images/mobile/stories/story2.png');
+            }
+        }
+    }
+
+    .story:nth-child(3) {
+        .story__picture {
+            background: url("../images/stories/story3.png");
+
+            @include media-mobile {
+                background: url('../images/mobile/stories/story3.png');
+            }
+        }
+    }
+
+    .story:nth-child(4) {
+        .story__picture {
+            background: url("../images/stories/story4.png");
+
+            @include media-mobile {
+                background: url('../images/mobile/stories/story4.png');
+            }
+        }
+    }
+
     button {
+        position: relative;
         margin: 10px 0 0 3px;
 
+        @include media-mobile {
+            margin-top: -10px;  
+            padding-left: 25px;
+        }
+
         img {
-            margin-right: 9px;
+            position: absolute;
+            top: 18.25px;
+            left: 33.5px;
+
+            @include media-mobile {
+                top: 3px;
+                left: 1px;  
+                transform: scale(0.3);
+            }
         }
     }
 }

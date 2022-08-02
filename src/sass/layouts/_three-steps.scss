@@ -1,9 +1,18 @@
 .three-steps {
     margin-top: 84px;
 
+    @include media-mobile {
+        margin-top: 20px;
+    }
+
     h2 {
-        margin: 0 0 43px;
+        margin-bottom: 43px;
         @include heading($headings-font, $color-brand, 40px);
+
+        @include media-mobile {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
     }
 
     .step {
@@ -13,15 +22,24 @@
 
         .step__icon {
             position: relative;
+
+            @include media-mobile {
+                transform: scale(0.7);
+            }
         }
 
-        .step__icon>* {
+        .step__icon > * {
             display: block;
         }
-        
+
         p {
             @include text($text-font, $color-text);
             margin-top: 30px;
+
+            @include media-mobile {
+                margin-top: 0;
+                font-size: 10px;
+            }
         }
     }
 }
@@ -29,10 +47,21 @@
 .step:first-child {
     .step__icon {
         margin-right: 74px;
+
+        @include media-mobile {
+            margin-right: 0;
+            left: -16px;
+        }
     }
 
     p {
         margin-right: 74px;
+
+        @include media-mobile {
+            margin-right: 0;
+            text-align: left;
+            padding-right: 10px;
+        }
     }
 
     .step__icon img:last-child {
@@ -43,6 +72,17 @@
 }
 
 .step:nth-child(2n) {
+
+    @include media-mobile {
+        flex-grow: 2;
+    }
+
+    p {
+        @include media-mobile {
+            text-align: center;
+        }
+    }
+
     .step__icon img:last-child {
         position: absolute;
         top: 25%;
@@ -51,6 +91,19 @@
 }
 
 .step:last-child {
+    .step__icon {
+        @include media-mobile {
+            margin-right: 0;
+            left: 16px;
+        }
+    }
+
+    p {
+        @include media-mobile {
+            text-align: right;
+        }
+    }
+
     .step__icon img:last-child {
         position: absolute;
         top: 28%;

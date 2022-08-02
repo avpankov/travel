@@ -21,6 +21,12 @@
     width: 228px;
     height: 59px;
     @include text($headings-font, $color-text-secondary, 24px);
+
+    @include media-mobile {
+        width: 92px;
+        height: 30px;
+        font-size: 11px;
+    }
 }
 
 .log-in-btn {
@@ -36,7 +42,7 @@
     margin-bottom: 20px;
     cursor: pointer;
 
-    >img {
+    > img {
         vertical-align: bottom;
         margin-right: 10px;
     }

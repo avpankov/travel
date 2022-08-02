@@ -1,13 +1,25 @@
 header {
     background-image: url("../images/backgrounds/top.png");
-    width: 1440px;
+    max-width: 1440px;
     height: 765px;
+
+    @include media-mobile {
+        height: 251px;
+        background-image: url('../images/mobile/backgrounds/garrett-parker-DlkF4-dbCOU-unsplash 2.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
 
 .header {
     width: 1440px;
     height: 90px;
     background-color: $color-brand-transparent;
+
+    @include media-mobile {
+        width: 390px;
+        background: linear-gradient($color-additional, 35%, rgba(255, 255, 255, 0));
+    }
 
     h1 {
         position: absolute;
@@ -25,10 +37,24 @@ header {
 
         .logo {
             margin-left: 2px;
+
+            @include media-mobile {
+                margin-top: 45px;
+            } 
+
+            a:last-child {
+                @include media-mobile {
+                    display: none;
+                }
+            }
         }
 
         .header__navigation {
             padding-right: 15px;
+
+            @include media-mobile {
+                display: none;
+            }
 
             li {
                 display: inline-block;
@@ -36,6 +62,25 @@ header {
                 font-weight: 500;
                 line-height: 20px;
                 margin-right: 42px;
+                cursor: pointer;
+            }
+        }
+
+        .login-button {
+            @include media-mobile {
+                display: none;
+            }
+        }
+
+        .hamburger-menu {
+            display: none;
+
+            @include media-mobile {
+                display: block;
+                width: 35px;
+                height: 32px;
+                margin-top: 45px;
+                background: url('../images/mobile/icons/eva_menu-outline.png');
                 cursor: pointer;
             }
         }
@@ -49,6 +94,10 @@ header {
     height: 6px;
     top: 90px;
     background: linear-gradient($color-additional-transparent, rgba(255, 255, 255, 0));
+
+    @include media-mobile {
+        display: none;
+    }
 }
 
 .promo__content {
@@ -57,21 +106,38 @@ header {
         width: 892px;
         @include text($text-font, $color-text-secondary, 80px);
         line-height: 96px;
+
+        @include media-mobile {
+            display: none;
+        }
     }
 
     p {
         @include text($text-font, $color-text-secondary, 20px);
         font-style: italic;
         margin: 32px 0 46px;
+
+        @include media-mobile {
+            display: none;
+        }
     }
 
     .promo__input {
         position: relative;
+
+        @include media-mobile {
+            margin-top: 52px;
+        }
     }
 
     .promo__input button {
         position: absolute;
         top: 18px;
         left: 646px;
+
+        @include media-mobile {
+            top: 9px;
+            left: 260px;
+        }
     }
 }

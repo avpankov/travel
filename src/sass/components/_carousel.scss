@@ -1,27 +1,74 @@
 .carousel {
-    
+    position: relative;
+    overflow: hidden;
+
     .gallery {
         position: absolute;
         width: 2590px;
         margin-left: -575px;
         overflow-x: visible;
         transition: margin-left 0.3s;
+
+        @include media-mobile {
+            width: 1180px;
+            height: 210px;
+            padding-top: 5px;
+            margin-left: -10px;
+            overflow-x: hidden;
+        }
     }
 
     .gallery__card {
+        height: 800px;
+        width: 800px;
         position: relative;
         display: inline-block;
         margin: 0 28px;
+        border-radius: 16px;
 
-        img {
-            border-radius: 16px;
+        @include media-mobile {
+            width: 360px;
+            height: 210px;
+            margin: 0 10px;
+            display: inline-block;
+            z-index: -1;
         }
+
         p {
-            position: absolute; 
+            position: absolute;
             @include text($headings-font, $color-text-secondary, 32px);
             margin: 0;
             bottom: 45px;
             left: 15px;
+
+            @include media-mobile {
+                font-size: 20px;
+                top: 10px;
+            }
+        }
+    }
+
+    .gallery__card:first-child {
+        background: url("../images/pictures/spain-desktop.png");
+
+        @include media-mobile {
+            background: url('../images/mobile/pictures/spain.png');
+        }
+    }
+
+    .gallery__card:nth-child(2) {
+        background: url("../images/pictures/japan-desktop.png");
+
+        @include media-mobile {
+            background: url('../images/mobile/pictures/japan.png');
+        }
+    }
+
+    .gallery__card:last-child {
+        background: url("../images/pictures/usa-desktop.png");
+
+        @include media-mobile {
+            background: url('../images/mobile/pictures/usa.png');
         }
     }
 
@@ -29,5 +76,25 @@
         text-align: center;
         margin: 0 0 37px;
         padding-top: 823px;
+
+        @include media-mobile {
+            padding-top: 180px;
+            z-index: 999;
+            margin: 0 0 25px;
+        }
+    }
+}
+
+.gallery__arrows {
+    display: none;
+
+    @include media-mobile {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: 25.5px;
+        width: 340px;
     }
 }
