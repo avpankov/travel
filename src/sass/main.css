@@ -474,7 +474,6 @@ body {
 
 header {
   background-image: url("../images/backgrounds/top.png");
-  max-width: 1440px;
   height: 765px;
 }
 @media (max-width: 390px) {
@@ -487,7 +486,6 @@ header {
 }
 
 .header {
-  width: 1440px;
   height: 90px;
   background-color: rgba(242, 120, 92, 0.7);
 }
@@ -509,13 +507,14 @@ header {
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  position: relative;
 }
 .header .navigation .logo {
   margin-left: 2px;
 }
 @media (max-width: 390px) {
   .header .navigation .logo {
-    margin-top: 45px;
+    margin-top: 34px;
   }
 }
 @media (max-width: 390px) {
@@ -546,18 +545,45 @@ header {
     display: none;
   }
 }
-.header .navigation .hamburger-menu {
+.header .navigation .hamburger {
   display: none;
 }
 @media (max-width: 390px) {
-  .header .navigation .hamburger-menu {
+  .header .navigation .hamburger {
     display: block;
     width: 35px;
     height: 32px;
-    margin-top: 45px;
+    margin: 30px 5px 0 0;
     background: url("../images/mobile/icons/eva_menu-outline.png");
     cursor: pointer;
   }
+}
+
+.hamburger__menu {
+  position: absolute;
+  top: 0;
+  right: -200px;
+  width: 165px;
+  height: 250px;
+  background: #f2785c;
+  box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+  border-radius: 10px;
+  z-index: 999;
+  transition: right 0.9s;
+}
+.hamburger__menu .hamburger__menu__list {
+  text-align: right;
+  margin: 40px 15px 0 0;
+  list-style: none;
+}
+.hamburger__menu .hamburger__menu__list li {
+  font-family: "Red Hat Text", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 5px 0;
 }
 
 .header::after {
@@ -639,7 +665,7 @@ header {
 @media (max-width: 390px) {
   .three-steps h2 {
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 9px;
   }
 }
 .three-steps .step {
@@ -666,7 +692,7 @@ header {
 }
 @media (max-width: 390px) {
   .three-steps .step p {
-    margin-top: 0;
+    margin-top: 3px;
     font-size: 10px;
   }
 }
@@ -746,7 +772,7 @@ header {
 @media (max-width: 390px) {
   .destinations {
     height: 270px;
-    margin-top: 20px;
+    margin-top: 12px;
   }
 }
 .destinations h2 {
@@ -761,28 +787,7 @@ header {
 @media (max-width: 390px) {
   .destinations h2 {
     font-size: 14px;
-    margin-bottom: 20px;
-  }
-}
-.destinations button {
-  position: relative;
-  padding-left: 55px;
-}
-@media (max-width: 390px) {
-  .destinations button {
-    padding-left: 25px;
-  }
-}
-.destinations button img {
-  position: absolute;
-  top: 18.25px;
-  left: 33.5px;
-}
-@media (max-width: 390px) {
-  .destinations button img {
-    top: 3px;
-    left: 1px;
-    transform: scale(0.3);
+    margin-bottom: 18px;
   }
 }
 
@@ -790,6 +795,11 @@ header {
   margin-top: 53px;
   text-align: center;
   overflow: visible;
+}
+@media (max-width: 390px) {
+  .stories {
+    margin-top: 40px;
+  }
 }
 .stories .stories__list {
   height: 1331px;
@@ -808,7 +818,7 @@ header {
 }
 @media (max-width: 390px) {
   .stories .stories__list .stories__list_filter {
-    height: 628px;
+    height: 618px;
   }
 }
 .stories h2 {
@@ -823,7 +833,7 @@ header {
 @media (max-width: 390px) {
   .stories h2 {
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 }
 .stories .story {
@@ -854,6 +864,7 @@ header {
 }
 .stories .story .story__content {
   width: 760px;
+  overflow: hidden;
 }
 @media (max-width: 390px) {
   .stories .story .story__content {
@@ -870,7 +881,7 @@ header {
 @media (max-width: 390px) {
   .stories .story .story__content h3 {
     font-size: 11px;
-    margin: 0 0 10px;
+    margin: 5px 0 10px;
     font-weight: 700;
   }
 }
@@ -893,7 +904,7 @@ header {
 }
 @media (max-width: 390px) {
   .stories .story:first-child {
-    margin: 0 0 7.5px;
+    margin: 0 0 -2.5px;
   }
 }
 .stories .story:first-child .story__picture {
@@ -912,6 +923,11 @@ header {
     background: url("../images/mobile/stories/story2.png");
   }
 }
+@media (max-width: 390px) {
+  .stories .story:nth-child(3) {
+    margin: -3px 0 -2.5px;
+  }
+}
 .stories .story:nth-child(3) .story__picture {
   background: url("../images/stories/story3.png");
 }
@@ -920,34 +936,17 @@ header {
     background: url("../images/mobile/stories/story3.png");
   }
 }
+@media (max-width: 390px) {
+  .stories .story:nth-child(4) {
+    margin: 9px 0 -2.5px;
+  }
+}
 .stories .story:nth-child(4) .story__picture {
   background: url("../images/stories/story4.png");
 }
 @media (max-width: 390px) {
   .stories .story:nth-child(4) .story__picture {
     background: url("../images/mobile/stories/story4.png");
-  }
-}
-.stories button {
-  position: relative;
-  margin: 10px 0 0 3px;
-}
-@media (max-width: 390px) {
-  .stories button {
-    margin-top: -10px;
-    padding-left: 25px;
-  }
-}
-.stories button img {
-  position: absolute;
-  top: 18.25px;
-  left: 33.5px;
-}
-@media (max-width: 390px) {
-  .stories button img {
-    top: 3px;
-    left: 1px;
-    transform: scale(0.3);
   }
 }
 
@@ -964,6 +963,11 @@ header {
   color: #ffffff;
   font-size: 16px;
 }
+@media (max-width: 390px) {
+  .footer .wrapper p {
+    display: none;
+  }
+}
 .footer .wrapper .social-medias {
   position: absolute;
   top: -8px;
@@ -971,6 +975,13 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+@media (max-width: 390px) {
+  .footer .wrapper .social-medias {
+    top: 19px;
+    right: 0;
+    left: calc(50% - 76px);
+  }
 }
 .footer .wrapper .social-medias > * {
   margin: 0 11px;
@@ -1119,6 +1130,20 @@ header {
   }
 }
 
+.btn_arrow img {
+  margin-right: 12.5px;
+  vertical-align: top;
+  padding-top: 2px;
+}
+@media (max-width: 390px) {
+  .btn_arrow img {
+    transform: scale(0.3);
+    padding-top: 3px;
+    margin: -2px -6.5px 0 -10px;
+    vertical-align: middle;
+  }
+}
+
 .log-in-btn {
   width: 560px;
   height: 56px;
@@ -1173,6 +1198,7 @@ header {
     width: 328px;
     height: 48px;
     padding: 0 16px 0 16px;
+    font-size: 14px;
   }
 }
 
@@ -1190,7 +1216,11 @@ header {
 
 .carousel {
   position: relative;
-  overflow: hidden;
+}
+@media (max-width: 390px) {
+  .carousel {
+    overflow-x: hidden;
+  }
 }
 .carousel .gallery {
   position: absolute;
@@ -1206,6 +1236,7 @@ header {
     padding-top: 5px;
     margin-left: -10px;
     overflow-x: hidden;
+    overflow-y: clip;
   }
 }
 .carousel .gallery__card {
@@ -1271,9 +1302,14 @@ header {
 }
 @media (max-width: 390px) {
   .carousel .gallery__switchers {
-    padding-top: 180px;
+    padding-top: 190px;
     z-index: 999;
-    margin: 0 0 25px;
+    margin: 0 0 16px;
+  }
+}
+@media (max-width: 390px) {
+  .carousel .gallery__switchers > div {
+    margin: 0 1px;
   }
 }
 
@@ -1286,7 +1322,7 @@ header {
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: calc(50% - 20px);
+    top: calc(50% - 15px);
     left: 25.5px;
     width: 340px;
   }

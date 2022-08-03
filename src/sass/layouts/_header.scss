@@ -1,18 +1,16 @@
 header {
     background-image: url("../images/backgrounds/top.png");
-    max-width: 1440px;
     height: 765px;
 
     @include media-mobile {
         height: 251px;
-        background-image: url('../images/mobile/backgrounds/garrett-parker-DlkF4-dbCOU-unsplash 2.png');
+        background-image: url("../images/mobile/backgrounds/garrett-parker-DlkF4-dbCOU-unsplash 2.png");
         background-size: contain;
         background-repeat: no-repeat;
     }
 }
 
 .header {
-    width: 1440px;
     height: 90px;
     background-color: $color-brand-transparent;
 
@@ -34,13 +32,14 @@ header {
         justify-content: space-between;
         align-items: center;
         align-content: center;
+        position: relative;
 
         .logo {
             margin-left: 2px;
 
             @include media-mobile {
-                margin-top: 45px;
-            } 
+                margin-top: 34px;
+            }
 
             a:last-child {
                 @include media-mobile {
@@ -72,17 +71,43 @@ header {
             }
         }
 
-        .hamburger-menu {
+        .hamburger {
             display: none;
 
             @include media-mobile {
                 display: block;
                 width: 35px;
                 height: 32px;
-                margin-top: 45px;
-                background: url('../images/mobile/icons/eva_menu-outline.png');
+                margin: 30px 5px 0 0;
+                background: url("../images/mobile/icons/eva_menu-outline.png");
                 cursor: pointer;
             }
+        }
+    }
+}
+
+.hamburger__menu {
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 165px;
+    height: 250px;
+    background: #f2785c;
+    box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+    border-radius: 10px;
+    z-index: 999;
+    transition: right .9s;
+
+    .hamburger__menu__list {
+        text-align: right;
+        margin: 40px 15px 0 0;
+        list-style: none;
+        li {
+            @include text($headings-font, $color-text-secondary, 16px);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+            margin: 5px 0;
         }
     }
 }

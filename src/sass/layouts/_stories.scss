@@ -3,6 +3,10 @@
     text-align: center;
     overflow: visible;
 
+    @include media-mobile {
+        margin-top: 40px;
+    }
+
     .stories__list {
         height: 1331px;
         background: url("../images/backgrounds/stories.png");
@@ -18,7 +22,7 @@
             background: rgba(255, 255, 255, 0.7);
 
             @include media-mobile {
-                height: 628px;
+                height: 618px;
             }
         }
     }
@@ -29,7 +33,7 @@
 
         @include media-mobile {
             font-size: 14px;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
         }
     }
 
@@ -60,6 +64,7 @@
 
         .story__content {
             width: 760px;
+            overflow: hidden;
 
             @include media-mobile {
                 width: 195px;
@@ -72,7 +77,7 @@
 
                 @include media-mobile {
                     font-size: 11px;
-                    margin: 0 0 10px;
+                    margin: 5px 0 10px;
                     font-weight: 700;
                 }
             }
@@ -98,7 +103,7 @@
     .story:first-child {
 
         @include media-mobile {
-            margin: 0 0 7.5px;
+            margin: 0 0 -2.5px;
         }
 
         .story__picture {
@@ -111,6 +116,7 @@
     }
 
     .story:nth-child(2) {
+
         .story__picture {
             background: url("../images/stories/story2.png");
 
@@ -121,6 +127,11 @@
     }
 
     .story:nth-child(3) {
+
+        @include media-mobile {
+            margin: -3px 0 -2.5px;
+        }
+
         .story__picture {
             background: url("../images/stories/story3.png");
 
@@ -131,33 +142,16 @@
     }
 
     .story:nth-child(4) {
+
+        @include media-mobile {
+            margin: 9px 0 -2.5px;
+        }
+
         .story__picture {
             background: url("../images/stories/story4.png");
 
             @include media-mobile {
                 background: url('../images/mobile/stories/story4.png');
-            }
-        }
-    }
-
-    button {
-        position: relative;
-        margin: 10px 0 0 3px;
-
-        @include media-mobile {
-            margin-top: -10px;  
-            padding-left: 25px;
-        }
-
-        img {
-            position: absolute;
-            top: 18.25px;
-            left: 33.5px;
-
-            @include media-mobile {
-                top: 3px;
-                left: 1px;  
-                transform: scale(0.3);
             }
         }
     }
